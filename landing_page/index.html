@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVR Industries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>AVR Industries</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h2>Welcome to AVR Industries</h2>
+        <p>Empowering your business with innovative solutions and expert guidance. Together, we achieve greatness.</p>
+        <a href="#contact" class="cta">Get Started</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>My Company was founded with a mission to drive progress and innovation in the business world. With a team of seasoned professionals, we offer a unique blend of strategic insight and practical expertise. Our commitment to excellence ensures that our clients achieve their most ambitious goals.</p>
+        <p>We believe in the power of collaboration and strive to build long-lasting partnerships with our clients. Our holistic approach addresses every aspect of your business, from strategy to execution, ensuring sustainable growth and success.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <i class="fas fa-briefcase"></i>
+            <h3>Business Consulting</h3>
+            <p>Our expert consultants provide tailored advice to help you navigate complex business challenges and capitalize on new opportunities.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-chart-line"></i>
+            <h3>Market Analysis</h3>
+            <p>We offer comprehensive market analysis services to help you understand industry trends, customer needs, and competitive landscapes.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Project Management</h3>
+            <p>Our project management services ensure that your initiatives are delivered on time, within budget, and to the highest standards.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-digital-tachograph"></i>
+            <h3>Digital Transformation</h3>
+            <p>We help you leverage the latest technologies to streamline operations, enhance customer experiences, and drive business growth.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Working with My Company has been a game-changer for our business. Their expertise and dedication have helped us achieve incredible results."</p>
+                <p>- John Doe, CEO of ABC Corp</p>
+            </div>
+            <div class="testimonial">
+                <p>"The team at My Company is exceptional. They understood our needs and provided solutions that exceeded our expectations."</p>
+                <p>- Jane Smith, Marketing Director at XYZ Ltd</p>
+            </div>
+            <div class="testimonial">
+                <p>"My Company’s strategic insights and hands-on approach have made a significant impact on our growth trajectory."</p>
+                <p>- Robert Brown, Founder of Startup Inc</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <h3>What industries do you specialize in?</h3>
+            <p>We specialize in technology, finance, and healthcare sectors.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I get a consultation?</h3>
+            <p>Simply fill out the contact form below, and we'll get back to you promptly.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What makes your services unique?</h3>
+            <p>We combine deep industry expertise with innovative solutions tailored to your specific business needs.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to work with us? Reach out to us via the form below or connect with us on social media.</p>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/amith-viswas-reddy/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/amithviswas_reddy/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/amithviswas0909?t=5KBaC2f09HFtjuen9Ap42Q&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/amithviswas" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AVR Industries. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

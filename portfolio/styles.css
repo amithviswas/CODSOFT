@@ -1,0 +1,453 @@
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/collection/190727/1600x900') center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+/* Navigation styling */
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Section styling */
+.section {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    color: #333;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #4e54c8;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.content img {
+    max-width: 250px;
+    border-radius: 50%;
+    margin-right: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.content div {
+    flex: 1;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+#skills li {
+    background: #fff;
+    color: #333;
+    margin: 10px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#skills li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+#skills li:hover::before {
+    transform: scaleX(1);
+}
+
+#skills li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project {
+    background: #0e0d0d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover::before {
+    opacity: 1;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    transition: filter 0.3s;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+    filter: blur(5px);
+}
+
+.project-content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.project:hover .project-content {
+    transform: translateY(0);
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 1rem;
+}
+
+#resume a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #4e54c8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+#resume a:hover {
+    background: #8f94fb;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* Animated Background */
+.animated-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(78, 84, 200, 0.8) 0%, rgba(143, 148, 251, 0.8) 100%);
+    z-index: -1;
+    animation: animatedGradient 10s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes animatedGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Animated Skills Bars */
+.skills-bar {
+    background: #f0f0f0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skills-bar .bar {
+    height: 20px;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    transition: width 0.6s ease;
+}
+
+.skills-bar .bar-html { width: 90%; }
+.skills-bar .bar-css { width: 85%; }
+.skills-bar .bar-js { width: 80%; }
+.skills-bar .bar-python { width: 85%; }
+.skills-bar .bar-r { width: 75%; }
+
+/* Highlighted Text */
+.highlighted-text {
+    color: #4e54c8;
+    font-weight: bold;
+}
+
+/* Hover Effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-opacity {
+    transition: opacity 0.3s ease;
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+/* Graphical Elements */
+.graphical-section {
+    background: linear-gradient(to right, #8f94fb, #4e54c8);
+    color: #fff;
+    padding: 80px 0;
+}
+
+.graphical-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.graphical-section .graphical-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.graphical-section .graphical-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.graphical-section .graphical-item p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-left: 40px;
+    flex: 1;
+}
+
+/* Additional Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .section h2::after {
+        width: 30px;
+    }
+
+    #skills li {
+        padding: 15px 20px;
+    }
+
+    .project {
+        padding: 20px;
+    }
+
+    #resume a {
+        padding: 12px 24px;
+    }
+
+    .graphical-section .graphical-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .graphical-section .graphical-item img {
+        margin-bottom: 20px;
+    }
+}
+/* styles.css */
+
+/* Ensure the body and HTML have full height for vertical centering */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox styles for centering content */
+.container {
+    max-width: 960px;
+    margin: auto; /* Horizontally center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    height: 100%; /* Ensure the container takes full height of the viewport */
+}
+
+/* Adjustments for specific sections */
+section#resume {
+    text-align: center; /* Center-align the content inside the resume section */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+}
